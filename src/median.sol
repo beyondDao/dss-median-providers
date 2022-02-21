@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 /// median.sol
 
 // Copyright (C) 2019-2020 Maker Ecosystem Growth Holdings, INC.
@@ -15,257 +17,257 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-pragma solidity >=0.5.10;
+pragma solidity >=0.6.12;
 
-import "median/median.sol";
+import "dss-median/median.sol";
 
 contract MedianETHUSD is Median {
-    bytes32 public constant wat = "ETHUSD";
+    bytes32 public _wat = "ETHUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianBATUSD is Median {
-    bytes32 public constant wat = "BATUSD";
+    bytes32 public _wat = "BATUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianWBTCUSD is Median {
-    bytes32 public constant wat = "BTCUSD";
+    bytes32 public _wat = "BTCUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianREPUSD is Median {
-    bytes32 public constant wat = "REPUSD";
+    bytes32 public _wat = "REPUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianZRXUSD is Median {
-    bytes32 public constant wat = "ZRXUSD";
+    bytes32 public _wat = "ZRXUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianOMGUSD is Median {
-    bytes32 public constant wat = "OMGUSD";
+    bytes32 public _wat = "OMGUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianDGDUSD is Median {
-    bytes32 public constant wat = "DGDUSD";
+    bytes32 public _wat = "DGDUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianGNTUSD is Median {
-    bytes32 public constant wat = "GNTUSD";
+    bytes32 public _wat = "GNTUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianUSDCUSD is Median {
-    bytes32 public constant wat = "USDCUSD";
+    bytes32 public _wat = "USDCUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianTUSDUSD is Median {
-    bytes32 public constant wat = "TUSDUSD";
+    bytes32 public _wat = "TUSDUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianKNCUSD is Median {
-    bytes32 public constant wat = "KNCUSD";
+    bytes32 public _wat = "KNCUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianMANAUSD is Median {
-    bytes32 public constant wat = "MANAUSD";
+    bytes32 public _wat = "MANAUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianUSDTUSD is Median {
-    bytes32 public constant wat = "USDTUSD";
+    bytes32 public _wat = "USDTUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianPAXUSDUSD is Median {
-    bytes32 public constant wat = "PAXUSDUSD";
+    bytes32 public _wat = "PAXUSDUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianCOMPUSD is Median {
-    bytes32 public constant wat = "COMPUSD";
+    bytes32 public _wat = "COMPUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianLRCUSD is Median {
-    bytes32 public constant wat = "LRCUSD";
+    bytes32 public _wat = "LRCUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianLINKUSD is Median {
-    bytes32 public constant wat = "LINKUSD";
+    bytes32 public _wat = "LINKUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianBALUSD is Median {
-    bytes32 public constant wat = "BALUSD";
+    bytes32 public _wat = "BALUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianYFIUSD is Median {
-    bytes32 public constant wat = "YFIUSD";
+    bytes32 public _wat = "YFIUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianGUSDUSD is Median {
-    bytes32 public constant wat = "GUSDUSD";
+    bytes32 public _wat = "GUSDUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianRENBTCUSD is Median {
-    bytes32 public constant wat = "RENBTCUSD";
+    bytes32 public _wat = "RENBTCUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 contract MedianUNIUSD is Median {
-    bytes32 public constant wat = "UNIUSD";
+    bytes32 public _wat = "UNIUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
 }
 
 contract MedianAAVEUSD is Median {
-    bytes32 public constant wat = "AAVEUSD";
+    bytes32 public _wat = "AAVEUSD";
 
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal override view returns (address) {
         return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, _wat)))),
             v, r, s
         );
     }
