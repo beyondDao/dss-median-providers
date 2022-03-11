@@ -22,7 +22,12 @@ pragma solidity >=0.6.12;
 import "dss-median/median.sol";
 
 contract MedianXTUSD is Median {
-    constructor() Median("ETHUSD") public {
+    constructor() Median("XTUSD") public {
+    }
+}
+
+contract MedianXBTCUSD is Median {
+    constructor() Median("BTCUSD") public {
     }
 }
 
@@ -32,7 +37,7 @@ contract MedianXETHUSD is Median {
 }
 
 contract MedianXUSDTUSD is Median {
-    constructor() Median("ETHUSD") public {
+    constructor() Median("USDTUSD") public {
     }
 }
 
